@@ -1,0 +1,21 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Session Based Test Management Manager</h1>
+    </header>
+    
+    
+    
+    {{> loginButtons}}
+ 
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+ 
+<template name="task">
+  <li>{{text}}</li>
+</template>
