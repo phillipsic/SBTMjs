@@ -1,21 +1,37 @@
 <body>
   <div class="container">
     <header>
-      <h1>Session Based Test Management Manager</h1>
+      <h1>Session Based Test Management Manager - Active template {{projectTemplateActive}}</h1>
     </header>
     
     
     
     {{> loginButtons}}
+    
+    
+    
+     {{#if currentUser}}
+    <p>You're logged in!</p>
+    
+    
+    <table>
+    <td>User Admin</td>
+    <td>  <button class="project">Project</button> Project Admin</td>
+    <td>Sessions</td>
+    <td>My Sessions</td>
+    <td>Data Files</td
+    ><td>Reporting</td>
+    </table>
+    
+  {{> applicationLayout}}
+    
+  {{else}}
+  <p>You're NOT logged in!</p>
+  {{/if}}
  
-    <ul>
-      {{#each tasks}}
-        {{> task}}
-      {{/each}}
-    </ul>
   </div>
 </body>
  
-<template name="task">
-  <li>{{text}}</li>
+<template name="applicationLayout">
+  {{> Template.dynamic template=main}}
 </template>
