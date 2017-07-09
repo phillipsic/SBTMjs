@@ -1,45 +1,53 @@
 <body>
-  <div class="container">
-    <header>
-      <h1>Session Based Test Management Manager - Active template {{projectTemplateActive}}</h1>
-    </header>
-  
-    
-    {{> loginButtons}}
+	<div class="container">
+		<header>
+			<h1>Session Based Test Management Manager</h1>
+		</header>
 
-     {{#if currentUser}}
-    <p>You're logged in!</p>
-    
-    
-    <table>
-    <td>User Admin</td>
-    <td><a href="projects" >Project Admin</a></td>
-    <td>Sessions</td>
-    <td>My Sessions</td>
-    <td>Data Files</td
-    ><td>Reporting</td>
-    </table>
-   
- 
-  
- 
-    
-  {{else}}
-  <p>You're NOT logged in!</p>
-  {{/if}}
-  {{> applicationLayout}}
-  </div>
+	
+			{{> loginButtons}} {{#if currentUser}}
+			<p>You're logged in!</p>
+
+<span>
+			{{> applicationLayout}}
+</span>
+
+
+
+
+			<table>
+				<td><a href="usersAdmin">User Admin</a></td>
+				<td><a href="projects">Project Admin</a></td>
+				<td>Sessions</td>
+				<td><a href="mysessions">My Sessions</a></td>
+				<td>Data Files</td>
+				<td><a href="mysessions">Reporting</a></td>
+			</table>
+
+
+
+
+			{{else}}
+			<p>Please login</p>
+			{{/if}}
+
+		
+
+	</div>
 </body>
- 
-<template name="applicationLayout">
-  {{> Template.dynamic template=main}}
-</template>
 
+<template name="applicationLayout"> {{> Template.dynamic
+template=main}} </template>
 
 <template name="projectsAdmin">
- <p>This is the project admin template</p>
+<p>This is the project admin template</p>
 </template>
 
-<template name="blankpage">
- <h2>This the blank page template</h2>
+
+<template name="usersAdmin">
+<p>This is the user admin template</p>
+</template>
+
+<template name="mysessions">
+<h2>This the my sessions template</h2>
 </template>
