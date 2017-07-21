@@ -5,14 +5,14 @@ import './projectadmin_template.html';
 import './useradmin_template.html';
 import './mysessions_template.html';
   
-
+//import { Users } from '../api/users.js';
 
 BlazeLayout.setRoot('#test');
 
-Template.body.helpers({ 
-  tasks: [ 
-    { text: 'This is task 1' }, 
-    { text: 'This is task 2' }, 
-    { text: 'This is task 3' }, 
+Template.usersAdmin.helpers({ 
+  users: [ 
+    { text: 'user1' }, 
+    { text: 'user2' }, 
+    { text: 'user3' }, 
   ], 
 });
