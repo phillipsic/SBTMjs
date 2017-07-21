@@ -7,7 +7,7 @@
 
 		{{> loginButtons}} {{#if currentUser}}
 
-		<p>You're logged in!</p>
+
 
 
 		{{> adminmenubar}}
@@ -37,13 +37,14 @@ template=main}} </template>
 
 
 <template name="adminmenubar">
-<table>
-	<td><a href="usersAdmin">User Admin</a></td>
-	<td><a href="projects">Project Admin</a></td>
-	<td>Sessions</td>
-	<td><a href="mysessions">My Sessions</a></td>
-	<td>Data Files</td>
-	<td><a href="mysessions">Reporting</a></td>
-</table>
+<ul id="nav">
+	<li id="nav-1"><a href="usersAdmin">User Admin</a></li>
+	<li id="nav-2"><a href="projects">Project Admin</a></li>
+	<li id="nav-3"><a href="#">Sessions</a></li>
+	<li id="nav-4"><a href="mysessions">My Sessions</a></li>
+	<li id="nav-5"><a href="#">Data Files</a></li>
+	<li id="nav-6"><a href="#">Reporting</a></li>
+</ul>
+
 </template>
 

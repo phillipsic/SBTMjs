@@ -1,25 +1,43 @@
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	min-height: 100%;
-	background: white;
-}
-
-header {
-	background: #d2edf4;
-	background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
-	padding: 20px 15px 15px 15px;
-	position: relative;
-}
-
-#login-buttons {
-	display: block;
-}
-
-h1 {
-	font-size: 1.5em;
+/* navigation */
+	
+#nav {
+	float: left;
+	width: 100%;
 	margin: 0;
-	margin-bottom: 10px;
-	display: inline-block;
-	margin-right: 1em;
+	padding: 0;
+	list-style: none;
+	background: #ccc;
+	border-bottom: 1px solid #999;
+}
+
+#nav li { 
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+	
+#nav a {
+	float: left;
+	display: block;
+	padding: 6px 30px 6px 5px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 90%;
+	color: #666;
+	background: #ccc url(../img/nav_slant.gif) no-repeat top right;
+}
+	
+#nav #nav-1 a {
+	padding-left: 20px;
+}
+	
+#nav a:hover {
+	color: #000;
+}
+
+/* more */
+	
+ul#more {
+	clear: left;
+	margin-top: 60px;
 }
