@@ -1,6 +1,9 @@
 import { Template } from 'meteor/templating'; 
   
 import './body.html'; 
+import './projectadmin_template.html';
+import './useradmin_template.html';
+import './mysessions_template.html';
   
 
 

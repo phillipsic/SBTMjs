@@ -16,11 +16,7 @@
 
 
 
-<div  id="test">
-
-		{{> applicationLayout}}
-
-</div>
+		<div id="test">{{> applicationLayout}}</div>
 		{{else}}
 		<p>Please login</p>
 		{{/if}}
@@ -33,18 +29,12 @@
 <template name="applicationLayout"> {{> Template.dynamic
 template=main}} </template>
 
-<template name="projectsAdmin">
-<div>This is the project admin template</div>
-</template>
 
 
-<template name="usersAdmin">
-<p>This is the user admin template</p>
-</template>
 
-<template name="mysessions">
-<h2>This the my sessions template</h2>
-</template>
+
+
+
 
 <template name="adminmenubar">
 <table>
