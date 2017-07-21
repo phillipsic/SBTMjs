@@ -4,34 +4,28 @@
 			<h1>Session Based Test Management Manager</h1>
 		</header>
 
-	
-			{{> loginButtons}} {{#if currentUser}}
-			<p>You're logged in!</p>
 
-<span>
-			{{> applicationLayout}}
-</span>
+		{{> loginButtons}} {{#if currentUser}}
+
+		<p>You're logged in!</p>
 
 
-
-
-			<table>
-				<td><a href="usersAdmin">User Admin</a></td>
-				<td><a href="projects">Project Admin</a></td>
-				<td>Sessions</td>
-				<td><a href="mysessions">My Sessions</a></td>
-				<td>Data Files</td>
-				<td><a href="mysessions">Reporting</a></td>
-			</table>
+		{{> adminmenubar}}
 
 
 
 
-			{{else}}
-			<p>Please login</p>
-			{{/if}}
 
-		
+<div  id="test">
+
+		{{> applicationLayout}}
+
+</div>
+		{{else}}
+		<p>Please login</p>
+		{{/if}}
+
+
 
 	</div>
 </body>
@@ -40,7 +34,7 @@
 template=main}} </template>
 
 <template name="projectsAdmin">
-<p>This is the project admin template</p>
+<div>This is the project admin template</div>
 </template>
 
 
@@ -51,3 +45,15 @@ template=main}} </template>
 <template name="mysessions">
 <h2>This the my sessions template</h2>
 </template>
+
+<template name="adminmenubar">
+<table>
+	<td><a href="usersAdmin">User Admin</a></td>
+	<td><a href="projects">Project Admin</a></td>
+	<td>Sessions</td>
+	<td><a href="mysessions">My Sessions</a></td>
+	<td>Data Files</td>
+	<td><a href="mysessions">Reporting</a></td>
+</table>
+</template>
+

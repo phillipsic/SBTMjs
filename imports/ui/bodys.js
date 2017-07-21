@@ -2,6 +2,10 @@ import { Template } from 'meteor/templating';
   
 import './body.html'; 
   
+
+
+BlazeLayout.setRoot('#test');
+
 Template.body.helpers({ 
   tasks: [ 
     { text: 'This is task 1' }, 
