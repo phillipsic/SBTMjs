@@ -1,12 +1,12 @@
 <template name="usersAdmin">
 <p>This is the user admin template</p>
 
-<ul>{{#each users}} {{> user}} {{/each}}
+<ul>{{#each listusers}} {{> usertemplate}} {{/each}}
 </ul>
 
 
 </template>
 
-<template name="user">
-<li>{{text}}</li>
+<template name="usertemplate">
+<li>{{username}}</li>
 </template>
