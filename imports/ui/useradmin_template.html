@@ -28,9 +28,8 @@
 					<div class="input-group">
 
 						<label class="radio-inline"><input type="radio"
-							name="role">User</label> 
-							<label class="radio-inline"><input
-							type="radio" name="role">Admin </label>
+							name="role" value="user">User</label> <label class="radio-inline"><input
+							type="radio" name="role" value="admin">Admin </label>
 
 					</div>
 				</div>
@@ -64,7 +63,7 @@
 <template name="usertemplate">
 <tr>
 	<td>{{username}}</td>
-	<td>-</td>
+	<td>{{#if isInRole 'admin'}} admin {{/if}}</td>
 	<td>-</td>
 </tr>
 </template>

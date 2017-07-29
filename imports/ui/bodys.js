@@ -5,7 +5,7 @@ import './projectadmin_template.html';
 import './useradmin_template.html';
 import './mysessions_template.html';
 import './dashboard_template.html';
-//import { users } from '../api/users.js';
+// import { users } from '../api/users.js';
 
 BlazeLayout.setRoot('#test');
 
@@ -24,9 +24,48 @@ Template.usersAdmin.events({
         event.preventDefault();
         var email = $('[name=email]').val();
         var password = $('[name=password]').val();
-        Accounts.createUser({
+       // var role = $('[name=role]').val();
+        
+        var role =$("input[name='role']:checked").val()
+        
+      
+        
+        console.log("Role from browser")
+        console.log(role)
+        
+        if (role == 'admin'){
+        	
+        	rolename= "Admin User";
+        	
+        }else{
+        	rolename="Normal User";
+        }
+        
+        
+        console.log("Rolename from code")
+        console.log(rolename)
+        	
+       var userid = Accounts.createUser({
             email: email,
-            password: password
+            username: email,
+            password: password,
+            profile: { name: rolename }
         });
+        
+        console.log("Users ID")
+        console.log(Meteor.userId())
+        
+// if (role > 0) {
+// if (role = 'admin'){
+//
+// Roles.addUsersToRoles(id, user.roles, 'admin');
+//                
+// }else{
+        var roles = ['admin', 'roleName']; 
+       // Roles.addUsersToRoles(id, roles);
+	
+        	Roles.addUsersToRoles(Meteor.userId(), 'admin', 'default-group');
+        // }}
+        
     }
 });
