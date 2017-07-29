@@ -5,12 +5,7 @@
 		</header>
 
 
-		{{> loginButtons}} {{#if currentUser}}
-
-
-
-
-		{{> adminmenubar}}
+		{{> loginButtons}} {{#if currentUser}} {{> adminmenubar}}
 
 
 
@@ -18,7 +13,9 @@
 
 		<div id="test">{{> applicationLayout}}</div>
 		{{else}}
-		<p>Please login</p>
+		<div class="container">
+			<p>Please login</p>
+		</div>
 		{{/if}}
 
 
@@ -32,15 +29,24 @@ template=main}} </template>
 
 
 <template name="adminmenubar">
-<ul id="nav">
-	<li id="nav-1"><a href="usersAdmin">User Admin</a></li>
-	<li id="nav-2"><a href="projects">Project Admin</a></li>
-	<li id="nav-3"><a href="#">Sessions</a></li>
-	<li id="nav-4"><a href="mysessions">My Sessions</a></li>
-	<li id="nav-5"><a href="#">Data Files</a></li>
-	<li id="nav-6"><a href="#">Reporting</a></li>
-	<li id="nav-7"><a href="dashboard">Dashboard</a></li>
-</ul>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">SBTM Manager</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li id="nav-1"><a href="usersAdmin">User Admin</a></li>
+			<li id="nav-2"><a href="projects">Project Admin</a></li>
+			<li id="nav-3"><a href="#">Sessions</a></li>
+			<li id="nav-4"><a href="mysessions">My Sessions</a></li>
+			<li id="nav-5"><a href="#">Data Files</a></li>
+			<li id="nav-6"><a href="#">Reporting</a></li>
+			<li id="nav-7"><a href="dashboard">Dashboard</a></li>
+		</ul>
+	</div>
+</nav>
+
 
 </template>
 
