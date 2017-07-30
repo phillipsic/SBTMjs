@@ -51,8 +51,6 @@ Template.usersAdmin.events({
         event.preventDefault();
         var email = $('[name=email]').val();
         var password = $('[name=password]').val();
-       // var role = $('[name=role]').val();
-        
         var role =$("input[name='role']:checked").val()
         
       
@@ -60,39 +58,23 @@ Template.usersAdmin.events({
         console.log("Role from browser")
         console.log(role)
         
-        if (role == 'admin'){
+       
         	
-        	rolename= "Admin User";
-        	
-        }else{
-        	rolename="Normal User";
-        }
-        
-        
-        console.log("Rolename from code")
-        console.log(rolename)
-        	
-       var userid = Accounts.createUser({
-            email: email,
-            username: email,
-            password: password,
-            profile: { name: rolename }
-        });
-        
-        console.log("Users ID")
-        console.log(Meteor.userId())
-        
-// if (role > 0) {
-// if (role = 'admin'){
+        Meteor.call('users.insert', email, password, role);
+//       var userid = Accounts.createUser({
+//            email: email,
+//            username: email,
+//            password: password,
+//            profile: { name: rolename }
+//        });
+//        
+//        console.log("Users ID")
+//        console.log(Meteor.userId())
+//        
 //
-// Roles.addUsersToRoles(id, user.roles, 'admin');
-//                
-// }else{
-        var roles = ['admin', 'roleName']; 
-       // Roles.addUsersToRoles(id, roles);
-	
-        	Roles.addUsersToRoles(Meteor.userId(), role, 'default-group');
-        // }}
+//	
+//        	Roles.addUsersToRoles(Meteor.userId(), role, 'default-group');
+
         
     }
 });
