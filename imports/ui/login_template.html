@@ -1,9 +1,13 @@
 <template name="login">
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-offset-5 col-md-3">
-			<div class="form-login">
+	<div class="col-sm-5 col-sm-offset-3">
+		<div class="panel panel-default">
+
+			<div class="panel-heading">
+				<strong>Welcome back</strong>
+			</div>
+			<div class="panel-body">
 				<form class="login">
 					<p>
 						Email: <input type="email" name="email">
@@ -11,14 +15,21 @@
 					<p>
 						Password: <input type="password" name="password">
 					</p>
-					<p>
-						<input type="submit" value="Login">
-					</p>
+
+					<div>
+						<button type="submit" class="submit-with-icon black-background white">
+							Login <span class="glyphicon glyphicon-log-in"></span>
+						</button>
+					</div>
+
+
+
 				</form>
 			</div>
-
 
 		</div>
 	</div>
 </div>
+
+
 </template>
