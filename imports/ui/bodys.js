@@ -1,12 +1,11 @@
 import { Template } from 'meteor/templating'; 
-  
 import './body.html'; 
 import './projectadmin_template.html';
 import './useradmin_template.html';
 import './mysessions_template.html';
 import './dashboard_template.html';
 import './login_template.html';
-// import { users } from '../api/users.js';
+
 
 BlazeLayout.setRoot('#test');
 
@@ -51,16 +50,17 @@ Template.usersAdmin.events({
         event.preventDefault();
         var email = $('[name=email]').val();
         var password = $('[name=password]').val();
-        var role =$("input[name='role']:checked").val()
+        var role = $("input[name='role']:checked").val();
         
       
         
-        console.log("Role from browser")
-        console.log(role)
+
         
        
-        	
-        Meteor.call('users.insert', email, password, role);
+        	console.log("Inserting User");
+        	Meteor.call('createPlayer');
+        Meteor.call('adduser');
+//        Meteor.call('adduser', email, password, role);
 //       var userid = Accounts.createUser({
 //            email: email,
 //            username: email,
