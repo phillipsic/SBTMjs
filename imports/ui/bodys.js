@@ -59,8 +59,8 @@ Template.usersAdmin.events({
        
         	console.log("Inserting User");
         	Meteor.call('createPlayer');
-        Meteor.call('adduser');
-//        Meteor.call('adduser', email, password, role);
+//        Meteor.call('adduser');
+        Meteor.call('adduser', email, password, role);
 //       var userid = Accounts.createUser({
 //            email: email,
 //            username: email,
